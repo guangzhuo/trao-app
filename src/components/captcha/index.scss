@@ -1,0 +1,15 @@
+.captchaWrap{
+  .at-input__title{
+    width:36px;
+    display: flex;
+    justify-content: center;
+    .inputImg{
+      width:36px;
+      height:36px;
+      display: inline-block;
+    }
+  }
+  .code{
+    color:#7F9AFB;
+  }
+}

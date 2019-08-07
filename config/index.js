@@ -5,7 +5,8 @@ const config = {
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
     '@/utils': path.resolve(__dirname, '..', 'src/utils'),
-    '@/http': path.resolve(__dirname, '..', 'src/http')
+    '@/http': path.resolve(__dirname, '..', 'src/http'),
+    '@/assets': path.resolve(__dirname, '..', 'src/assets'),
   },
   projectName: 'my-h5',
   date: '2019-7-26',
@@ -100,6 +101,9 @@ const config = {
         }
       }
     },
+    router: {
+      mode: 'browser' // 或者是 'browser'
+    }
   }
 }
 

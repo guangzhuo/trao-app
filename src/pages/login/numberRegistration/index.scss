@@ -1,0 +1,40 @@
+.NumberRegistrationWrap{
+  // s税号登录
+  .phoneForm{
+    margin-top: 62px;
+  }
+  .at-form::after{
+    border:0;
+  }
+  .at-input__title{
+    width:36px;
+    display: flex;
+    justify-content: center;
+    .inputImg{
+      width:36px;
+      height:36px;
+      display: inline-block;
+    }
+  }
+  .phoneBtn{
+    margin: 60px 40px;
+  }
+  .at-input{
+    &::before{
+      position: absolute;
+      content:'';
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      height: 1PX;
+      transition: all .6s;
+    }
+  }
+  .at-input:hover{
+    &::before{
+      left: 0%;
+      right: 0%;
+      background: #3C64F0;
+    }
+  }
+}

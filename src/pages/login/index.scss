@@ -1,0 +1,51 @@
+//@import "~taro-ui/dist/style/components/tabs.scss";
+.login-hx{
+  .tabWrap{
+    .at-tabs__header{
+      width:80%;
+      margin: 30px auto 0;
+    }
+    .at-tabs__item{
+      color:#d7d8e0;
+      font-size:36px;
+      border-bottom: 4px solid #F3F4F8;
+    }
+    .at-tabs__item--active{
+      color:#313440;
+    }
+    .at-tabs__item--active .at-tabs__item-underline{
+      height: 4px;
+    }
+    .at-tabs__underline{
+      display: none;
+    }
+  }
+  .captchaLogin{
+    margin-top: 60px;
+    width:100%;
+    text-align: center;
+    font-size: 28px;
+    color:#3c64f0;
+    cursor: pointer;
+  }
+  .footer{
+    position: absolute;
+    bottom: 104px;
+    left:0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:28px;
+    font-weight:400;
+    color:rgba(162,166,177,1);
+    .line{
+      width:2PX;
+      display: inline-block;
+      height:28px;
+      margin: 0 40px;
+      background:rgba(234,236,245,1);
+    }
+  }
+}
+

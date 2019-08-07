@@ -1,8 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
 import Index from './pages/index'
-
-import counterStore from './store/counter'
+import stores from './store';
 import './app.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
@@ -11,15 +10,14 @@ if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
   require('nerv-devtools')
 }
 
-const store = {
-  counterStore
-}
 class App extends Component {
 
   config = {
     pages:  [
       // test
-      'pages/index/index',
+      'pages/login/index',
+      '/pages/retrievePassword/index',
+      '/pages/registered/index',
       'pages/test/index'
     ],
     window: {
@@ -32,6 +30,15 @@ class App extends Component {
 
   componentDidMount () {
     // console.log(test('a'))
+    // ios 键盘弹起 出现无法下拉的问题
+    /iphone|ipod|ipad/i.test(navigator.appVersion) &&
+    document.addEventListener(
+      'blur',
+      e => {
+        ['input', 'textarea'].includes(e.target.localName) && document.body.scrollIntoView(false);
+      },
+      true,
+    );
   }
 
   componentDidShow () {}
@@ -44,7 +51,7 @@ class App extends Component {
   // 请勿修改此函数
   render () {
     return (
-      <Provider store={store}>
+      <Provider store={stores}>
         <Index />
       </Provider>
     )

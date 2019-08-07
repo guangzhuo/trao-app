@@ -1,0 +1,79 @@
+.RegisteredWrap{
+  padding: 80px 40px 0;
+  .retrTitle{
+    font-size:40px;
+    font-weight:500;
+    color:rgba(49,52,64,1);
+    padding-bottom: 40px;
+  }
+  .at-input{
+    margin-left: 0;
+  }
+  .at-form::after{
+    border:0;
+  }
+  .at-input__title{
+    width:36px;
+    display: flex;
+    justify-content: center;
+    .inputImg{
+      width:36px;
+      height:36px;
+      display: inline-block;
+    }
+  }
+  .regPhone{
+    .leftregPhone{
+      text-align: left;
+    }
+    .at-input__title{
+      width:135px;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .phoneNumber{
+      padding: 0 20px 0 10px;
+      display: inline-block;
+      vertical-align: text-bottom;
+      border-right: 1px solid #F3F4F8;
+    }
+  }
+  .phoneBtn{
+    width:100%;
+    margin-top: 60px;
+  }
+  .eyeImg{
+    width:44px;
+    height:44px;
+    img{
+      width:44px;
+      height:44px;
+    }
+  }
+  .regProtocol{
+    font-size: 22px;
+    color:#A2A6B1;
+    padding-top: 40px;
+    .Protocol{
+      color: #3C64F0;
+    }
+  }
+  .at-input{
+    &::before{
+      position: absolute;
+      content:'';
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      height: 1PX;
+      transition: all .6s;
+    }
+  }
+  .at-input:hover{
+    &::before{
+      left: 0%;
+      right: 0%;
+      background: #3C64F0;
+    }
+  }
+}
